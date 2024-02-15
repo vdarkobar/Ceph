@@ -77,18 +77,18 @@ crontab -e
 ```
 ```
 # Every 15 minutes
-*/15 * * * * /root/script.sh vm_ct vm-9999-disk-0 15min
-*/15 * * * * /root/script.sh vm_ct vm-501-disk-0 15min
+*/15 * * * * /root/script.sh {pool-name}:{image-name} 15min
+*/15 * * * * /root/script.sh {pool-name}:{image-name} 15min
 
 # Every hour
-0 * * * * /root/script.sh vm_ct vm-9999-disk-0 hourly
+0 * * * * /root/script.sh {pool-name}:{image-name} hourly
 
 # Every day
-0 0 * * * /root/script.sh vm_ct vm-9999-disk-0 daily
+0 0 * * * /root/script.sh {pool-name}:{image-name} daily
 
 # Every week
-0 0 * * 0 /root/script.sh vm_ct vm-9999-disk-0 weekly
+0 0 * * 0 /root/script.sh {pool-name}:{image-name} weekly
 
 # Every month
-0 0 1 * * /root/script.sh vm_ct vm-9999-disk-0 monthly
+0 0 1 * * /root/script.sh {pool-name}:{image-name} monthly
 ```
